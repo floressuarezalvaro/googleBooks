@@ -9,8 +9,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-app.use("/api", require("./routes/apiRoutes"));
 app.use("/books", require("./routes/bookRoutes"));
 
 app.get("*", (req, res) => {
