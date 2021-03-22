@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URI || "mongodb://localhost/googleBooks", {
+  .connect(process.env.MONGO_URI || "mongodb://localhost/googlebooks", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
