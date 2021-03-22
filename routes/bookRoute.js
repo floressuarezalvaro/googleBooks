@@ -7,4 +7,6 @@ const {
 
 router.get("/", getBooks);
 router.post("/", createBook);
-router.delete("/", deleteBook);
+router.delete("/:id", deleteBook);
+
+module.exports = router;
