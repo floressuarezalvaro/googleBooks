@@ -7,8 +7,10 @@ module.exports = {
       createNewBook = new Book({
         title: req.body.title,
         author: req.body.author,
+        description: req.body.description,
         year: req.body.year,
         img: req.body.img,
+        link: req.body.link,
       });
       res.json(await createNewBook.save());
     } catch (err) {

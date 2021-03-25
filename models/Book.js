@@ -7,6 +7,10 @@ const BookSchema = new Schema({
     required: true,
   },
   author: {
+    type: Array,
+    required: false,
+  },
+  description: {
     type: String,
     required: false,
   },
@@ -15,6 +19,10 @@ const BookSchema = new Schema({
     required: false,
   },
   img: {
+    type: String,
+    required: false,
+  },
+  link: {
     type: String,
     required: false,
   },
