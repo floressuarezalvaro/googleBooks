@@ -4,7 +4,7 @@ const axios = require("axios");
 module.exports = {
   createBook: async (req, res) => {
     try {
-      const createNewBook = new Book({
+      createNewBook = new Book({
         title: req.body.title,
         author: req.body.author,
         year: req.body.year,
