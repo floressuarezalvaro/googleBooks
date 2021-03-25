@@ -10,7 +10,7 @@ module.exports = {
         year: req.body.year,
         img: req.body.img,
       });
-      res.json(data);
+      res.json(await createNewBook.save());
     } catch (err) {
       console.log(err);
     }
