@@ -1,4 +1,6 @@
 const { Book } = require("../models");
+const axios = require("axios");
+
 module.exports = {
   createBook: async (req, res) => {
     try {
@@ -8,7 +10,17 @@ module.exports = {
         year: req.body.year,
         img: req.body.img,
       });
-      res.json(await createNewBook.save());
+      res.json(data);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  apiBooks: async (req, res) => {
+    try {
+      const { data } = await axios.get(
+        `https://www.googleapis.com/books/v1/volumes?q=${req.body.searchBooks}&key=${process.env.key}`
+      );
+      res.json(data);
     } catch (err) {
       console.log(err);
     }
