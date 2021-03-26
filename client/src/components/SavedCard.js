@@ -14,7 +14,7 @@ const SavedCard = ({data}) => {
 	};
 	const spacing = {
 		margin: "20px 20px 10px 10px",
-		padding: "20px 20px 10px 10px"
+		padding: "15px 15px 15px 15px",
 	}
 	return (
 		<>
