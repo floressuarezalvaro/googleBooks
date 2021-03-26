@@ -8,6 +8,6 @@ export default {
         return axios.post("/book", bookResults);
     },
     deleteBook: function(id) {
-        return axios.delete("/book/" + id);
+        return axios.delete("/book/"+id);
     },
 };
