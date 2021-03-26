@@ -18,6 +18,10 @@ mongoose
   .then(() => console.log("MongoDB is connected"))
   .catch((err) => console.log(err));
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 app.use("/book", require("./routes/bookRoute"));
 
 if (process.env.NODE_ENV === "production") {
